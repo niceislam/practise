@@ -1,10 +1,15 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 
-class AppHome extends StatelessWidget {
-  const AppHome({super.key});
+import 'all_widget.dart';
 
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,13 +55,63 @@ class AppHome extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(
-        child: FloatingActionButton(
-          onPressed: () {},
-          child: Text("+", style: TextStyle( fontSize: 35)),
-          foregroundColor: Colors.black,
-        ),
-
+      body: ListView(
+        children: [
+          CardWidget(
+            name: "Nice islam",
+            phone: "01859009285",
+            address: "kalikagaon",
+            image: "assets/image/Nice2.jpg",
+          ),
+          CardWidget(
+            name: "Nice islam",
+            phone: "01859009285",
+            address: "kalikagaon",
+            image: "assets/image/Nice2.jpg",
+          ),
+          CardWidget(
+            name: "Nice islam",
+            phone: "01859009285",
+            address: "kalikagaon",
+            image: "assets/image/Nice2.jpg",
+          ),
+          CardWidget(
+            name: "Nice islam",
+            phone: "01859009285",
+            address: "kalikagaon",
+            image: "assets/image/Nice2.jpg",
+          ),
+          CardWidget(
+            name: "Nice islam",
+            phone: "01859009285",
+            address: "kalikagaon",
+            image: "assets/image/Nice2.jpg",
+          ),
+          CardWidget(
+            name: "Nice islam",
+            phone: "01859009285",
+            address: "kalikagaon",
+            image: "assets/image/Nice2.jpg",
+          ),
+          CardWidget(
+            name: "Nice islam",
+            phone: "01859009285",
+            address: "kalikagaon",
+            image: "assets/image/Nice2.jpg",
+          ),
+          CardWidget(
+            name: "Nice islam",
+            phone: "01859009285",
+            address: "kalikagaon",
+            image: "assets/image/Nice2.jpg",
+          ),
+          CardWidget(
+            name: "Nice islam",
+            phone: "01859009285",
+            address: "kalikagaon",
+            image: "assets/image/Nice2.jpg",
+          ),
+        ],
       ),
     );
   }
