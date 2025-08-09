@@ -47,7 +47,7 @@ class CardWidget extends StatelessWidget {
                 ),
                 Text(
                   "${phone == "" ? "" : phone}",
-                  style: TextStyle(color: Colors.black, fontSize: 25),
+                  style: TextStyle(color: Colors.black, fontSize: 22),
                 ),
                 Text(
                   "${address == "" ? "" : address}",

@@ -13,37 +13,55 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Map<String, dynamic>> contactInfo = [
     {
       "name": "Nice islam",
-      "phone": 01859009285,
+      "phone": '01859009285',
       "address": "Kalikagoan",
       "image": "assets/image/Nice2.jpg",
     },
     {
       "name": "mayeen bin ahsan",
-      "phone": 01859009285,
+      "phone": '01859009285',
       "address": "Goreya",
       "image": "assets/image/Nice2.jpg",
     },
     {
       "name": "rabby",
-      "phone": 01859009285,
+      "phone": '01859009285',
       "address": "nilfamari",
       "image": "",
     },
     {
       "name": "rabby",
-      "phone": 01859009285,
+      "phone": '01859009285',
       "address": "nilfamari",
       "image": "",
     },
     {
       "name": "rabby",
-      "phone": 01859009285,
+      "phone": '01859009285',
       "address": "nilfamari",
       "image": "assets/image/Nice2.jpg",
     },
     {
       "name": "rabby",
-      "phone": 01859009285,
+      "phone": '01859009285',
+      "address": "nilfamari",
+      "image": "",
+    },
+    {
+      "name": "rabby",
+      "phone": '01859009285',
+      "address": "nilfamari",
+      "image": "",
+    },
+    {
+      "name": "rabby",
+      "phone": "01859009285",
+      "address": "nilfamari",
+      "image": "",
+    },
+    {
+      "name": "rabby",
+      "phone": "01859009285",
       "address": "nilfamari",
       "image": "",
     },
@@ -54,10 +72,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        leading: Icon(Icons.arrow_back, color: Colors.white, size: 30),
         centerTitle: true,
         title: Text(
-          "Flutter Course",
+          "Friends Info",
           style: TextStyle(
             color: Colors.white,
             fontSize: 25,
@@ -104,6 +121,25 @@ class _HomeScreenState extends State<HomeScreen> {
             image: "${contactInfo[index]["image"]}",
           );
         },
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.blue,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home, size: 30),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.book, size: 30),
+            label: 'Study',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.school, size: 30),
+            label: 'Collage',
+          ),
+        ],
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.black,
       ),
     );
   }
