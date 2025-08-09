@@ -25,17 +25,10 @@ class CardWidget extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: 80,
-                height: 80,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage(
-                      "${image}",
-                    ),
-                  ),
+              child: CircleAvatar(
+                radius: 40,
+                backgroundImage: AssetImage(
+                  "${image == "" ? "assets/image/NotFound.jpg" : image}",
                 ),
               ),
             ),
@@ -45,7 +38,7 @@ class CardWidget extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  "${name}",
+                  "${name == "" ? "Not Found" : name}",
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 25,
@@ -53,11 +46,11 @@ class CardWidget extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "${phone}",
+                  "${phone == "" ? "" : phone}",
                   style: TextStyle(color: Colors.black, fontSize: 25),
                 ),
                 Text(
-                  "${address}",
+                  "${address == "" ? "" : address}",
                   style: TextStyle(color: Colors.black, fontSize: 18),
                 ),
               ],

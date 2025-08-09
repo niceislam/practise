@@ -10,6 +10,45 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<Map<String, dynamic>> contactInfo = [
+    {
+      "name": "Nice islam",
+      "phone": 01859009285,
+      "address": "Kalikagoan",
+      "image": "assets/image/Nice2.jpg",
+    },
+    {
+      "name": "mayeen bin ahsan",
+      "phone": 01859009285,
+      "address": "Goreya",
+      "image": "assets/image/Nice2.jpg",
+    },
+    {
+      "name": "rabby",
+      "phone": 01859009285,
+      "address": "nilfamari",
+      "image": "",
+    },
+    {
+      "name": "rabby",
+      "phone": 01859009285,
+      "address": "nilfamari",
+      "image": "",
+    },
+    {
+      "name": "rabby",
+      "phone": 01859009285,
+      "address": "nilfamari",
+      "image": "assets/image/Nice2.jpg",
+    },
+    {
+      "name": "rabby",
+      "phone": 01859009285,
+      "address": "nilfamari",
+      "image": "",
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,63 +94,16 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: ListView(
-        children: [
-          CardWidget(
-            name: "Nice islam",
-            phone: "01859009285",
-            address: "kalikagaon",
-            image: "assets/image/Nice2.jpg",
-          ),
-          CardWidget(
-            name: "Nice islam",
-            phone: "01859009285",
-            address: "kalikagaon",
-            image: "assets/image/Nice2.jpg",
-          ),
-          CardWidget(
-            name: "Nice islam",
-            phone: "01859009285",
-            address: "kalikagaon",
-            image: "assets/image/Nice2.jpg",
-          ),
-          CardWidget(
-            name: "Nice islam",
-            phone: "01859009285",
-            address: "kalikagaon",
-            image: "assets/image/Nice2.jpg",
-          ),
-          CardWidget(
-            name: "Nice islam",
-            phone: "01859009285",
-            address: "kalikagaon",
-            image: "assets/image/Nice2.jpg",
-          ),
-          CardWidget(
-            name: "Nice islam",
-            phone: "01859009285",
-            address: "kalikagaon",
-            image: "assets/image/Nice2.jpg",
-          ),
-          CardWidget(
-            name: "Nice islam",
-            phone: "01859009285",
-            address: "kalikagaon",
-            image: "assets/image/Nice2.jpg",
-          ),
-          CardWidget(
-            name: "Nice islam",
-            phone: "01859009285",
-            address: "kalikagaon",
-            image: "assets/image/Nice2.jpg",
-          ),
-          CardWidget(
-            name: "Nice islam",
-            phone: "01859009285",
-            address: "kalikagaon",
-            image: "assets/image/Nice2.jpg",
-          ),
-        ],
+      body: ListView.builder(
+        itemCount: contactInfo.length,
+        itemBuilder: (context, index) {
+          return CardWidget(
+            name: "${contactInfo[index]["name"]}",
+            phone: "${contactInfo[index]["phone"]}",
+            address: "${contactInfo[index]["address"]}",
+            image: "${contactInfo[index]["image"]}",
+          );
+        },
       ),
     );
   }
