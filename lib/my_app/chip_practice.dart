@@ -45,8 +45,12 @@ class _ChipPracticeState extends State<ChipPractice> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Checkbox(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
                   activeColor: Colors.blue,
                   checkColor: Colors.white,
+
                   side: BorderSide(color: Colors.blue, width: 2),
                   value: status,
                   onChanged: (b) {
