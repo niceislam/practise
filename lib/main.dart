@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:new_app10/practice/new_screen.dart';
 import 'package:new_app10/practice/textfield.dart';
 
 import 'my_app/chip_practice.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Textfielddata(),
+      home: MorAppScreen(),
     );
   }
 }
