@@ -121,6 +121,7 @@ class _MorAppScreenState extends State<MorAppScreen> {
               Column(
                 children: [
                   GridView.builder(
+                    physics: NeverScrollableScrollPhysics(),
                     scrollDirection: Axis.vertical,
                     shrinkWrap: true,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

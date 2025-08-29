@@ -54,3 +54,37 @@ class NewContainerCard extends StatelessWidget {
     );
   }
 }
+
+class CardmainWidget extends StatelessWidget {
+  const CardmainWidget({super.key, this.title, this.sidecolor, this.icon});
+  final String? title;
+  final Color? sidecolor;
+  final Icon? icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 175,
+      width: 175,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.black.withOpacity(0.1), width: 4),
+      ),
+      child: Column(
+        spacing: 10,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          CircleAvatar(
+            radius: 32,
+            backgroundColor: Colors.black.withOpacity(0.1),
+            child: Icon(Icons.campaign, size: 45, color: Colors.black),
+          ),
+          Text(
+            "Marketing",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          ),
+        ],
+      ),
+    );
+  }
+}
